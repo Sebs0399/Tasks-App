@@ -10,6 +10,7 @@ function saveTask(e) {
     };
     if (title | description ==""){
       alert('Campos vacios');
+      document.getElementById('alertas');
     }
     else if(localStorage.getItem('tasks') === null) {
         let tasks = [];
@@ -21,6 +22,7 @@ function saveTask(e) {
         tasks.push(task);
         localStorage.setItem('tasks', JSON.stringify(tasks));
       }
+
     getTasks();
     document.getElementById('formTask').reset();
     e.preventDefault();
