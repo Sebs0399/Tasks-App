@@ -6,12 +6,16 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     </head>
     <body>
-        <!--barra de navegacion-->
-        <nav class="navbar navbar-light bg-light">
-            <div class="container">
-                <a href="#" class="navbar-brand">ToDoAPP</a>      
-            </div>
-        </nav> 
+        <!--barra de navegacion-->   
+        <nav class="navbar navbar-dark bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand">ToDoAPP</a>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+        </nav>
         <!--contenido principal-->
         <div class="container">
             <div class="row my-5">
