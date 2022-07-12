@@ -8,17 +8,19 @@ function saveTask(e) {
         title,
         description
     };
-    
-    if(localStorage.getItem('tasks') === null) {
+    if (title | description ==""){
+      alert('Campos vacios');
+    }
+    else if(localStorage.getItem('tasks') === null) {
         let tasks = [];
         tasks.push(task);
         localStorage.setItem('tasks', JSON.stringify(tasks));
-      } else {
+      } 
+    else{
         let tasks = JSON.parse(localStorage.getItem('tasks'));
         tasks.push(task);
         localStorage.setItem('tasks', JSON.stringify(tasks));
       }
-
     getTasks();
     document.getElementById('formTask').reset();
     e.preventDefault();
@@ -52,4 +54,9 @@ function deleteTask(title) {
     localStorage.setItem('tasks', JSON.stringify(tasks));
     getTasks();
 }
+
+function emptyTask() {
+
+}
+
 getTasks();
